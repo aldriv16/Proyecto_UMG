@@ -11,7 +11,11 @@ void mostrarMenu() {
     cout << "2. Conversor de numeros a letras (entero)" << endl;
     cout << "3. Conversor de numeros a letras (con decimales)" << endl;
     cout << "4. Metodo de Horner para polinomios (Programa Libre)" << endl;
-    cout << "5. Salir" << endl;
+    cout << "5. Calculadora" << endl;
+    cout << "6. Numeros pares eh impares" << endl;    
+	cout << "7. Conversiones de unidades de medida" << endl;
+    cout << "8. Conversion de tiempo" << endl;
+	cout << "9. Salir" << endl;
     cout << "Seleccione una opcion: ";
 }
 
@@ -43,6 +47,18 @@ int main() {
                 system("g++ -o horner Programa_20_libre.cpp && horner.exe");
                 break;
             case 5:
+                system("g++ -o calcular 1.Operaciones.cpp  && 1.Operaciones.exe");
+                break;
+            case 6:
+                system("g++ -o verificar  2.pares.cpp  && 2.pares.exe");
+                break;
+            case 7:
+                system("g++ -o convertirUnidades  3.conversiones.cpp  && 3.conversiones.exe");
+                break;
+            case 8:
+                system("g++ -o opcion  libre.cpp  && libre.exe");
+                break;    
+			case 9:
                 cout << "Saliendo del programa..." << endl;
                 break;
             default:
