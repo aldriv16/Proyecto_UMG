@@ -13,9 +13,9 @@ void mostrarMenu() {
     cout << "4. Metodo de Horner para polinomios (Programa Libre)" << endl;
     cout << "5. Calculadora" << endl;
     cout << "6. Numeros pares eh impares" << endl;    
-	cout << "7. Conversiones de unidades de medida" << endl;
-    cout << "8. Conversion de tiempo" << endl;
-	cout << "9. Salir" << endl;
+    cout << "7. Conversiones de unidades de medida" << endl;
+    cout << "8. Conversion de tiempo (programa libre)" << endl;
+    cout << "9. Salir" << endl;
     cout << "Seleccione una opcion: ";
 }
 
