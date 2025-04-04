@@ -4,11 +4,61 @@
 
 using namespace std;
 
-vector<string> unidades = {"", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"};
-vector<string> decenas_especiales = {"diez", "once", "doce", "trece", "catorce", "quince", "dieciseis", "diecisiete", "dieciocho", "diecinueve"};
-vector<string> decenas = {"", "diez", "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa"};
-vector<string> centenas = {"", "cien", "doscientos", "trescientos", "cuatrocientos", "quinientos", 
-                          "seiscientos", "setecientos", "ochocientos", "novecientos"};
+// Vectores inicializados de forma compatible con C++98
+vector<string> unidades;
+vector<string> decenas_especiales;
+vector<string> decenas;
+vector<string> centenas;
+
+void inicializarVectores() {
+    // Inicialización de unidades
+    unidades.push_back("");
+    unidades.push_back("uno");
+    unidades.push_back("dos");
+    unidades.push_back("tres");
+    unidades.push_back("cuatro");
+    unidades.push_back("cinco");
+    unidades.push_back("seis");
+    unidades.push_back("siete");
+    unidades.push_back("ocho");
+    unidades.push_back("nueve");
+
+    // Inicialización de decenas especiales
+    decenas_especiales.push_back("diez");
+    decenas_especiales.push_back("once");
+    decenas_especiales.push_back("doce");
+    decenas_especiales.push_back("trece");
+    decenas_especiales.push_back("catorce");
+    decenas_especiales.push_back("quince");
+    decenas_especiales.push_back("dieciseis");
+    decenas_especiales.push_back("diecisiete");
+    decenas_especiales.push_back("dieciocho");
+    decenas_especiales.push_back("diecinueve");
+
+    // Inicialización de decenas
+    decenas.push_back("");
+    decenas.push_back("diez");
+    decenas.push_back("veinte");
+    decenas.push_back("treinta");
+    decenas.push_back("cuarenta");
+    decenas.push_back("cincuenta");
+    decenas.push_back("sesenta");
+    decenas.push_back("setenta");
+    decenas.push_back("ochenta");
+    decenas.push_back("noventa");
+
+    // Inicialización de centenas
+    centenas.push_back("");
+    centenas.push_back("cien");
+    centenas.push_back("doscientos");
+    centenas.push_back("trescientos");
+    centenas.push_back("cuatrocientos");
+    centenas.push_back("quinientos");
+    centenas.push_back("seiscientos");
+    centenas.push_back("setecientos");
+    centenas.push_back("ochocientos");
+    centenas.push_back("novecientos");
+}
 
 string convertirGrupo(int numero) {
     if (numero == 0) return "";
@@ -59,6 +109,9 @@ string numeroALetras(int numero) {
 }
 
 int main() {
+    // Inicializar los vectores al inicio del programa
+    inicializarVectores();
+    
     int numero;
     char opcion;
     

@@ -2,11 +2,13 @@
 #include <algorithm>
 #include <cctype>
 #include <limits>
+#include <string>
 
 // Función para limpiar la cadena eliminando caracteres no alfanuméricos y convirtiendo a minúsculas
 std::string limpiarCadena(const std::string& str) {
     std::string limpio;
-    for (char c : str) {
+    for (size_t i = 0; i < str.size(); ++i) {  // Cambio a bucle tradicional
+        char c = str[i];
         if (std::isalnum(static_cast<unsigned char>(c))) {
             limpio += std::tolower(static_cast<unsigned char>(c));
         }
@@ -56,7 +58,7 @@ int main() {
         std::cin >> opcion;
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         
-    } while (std::tolower(opcion) == 's');
+    } while (tolower(opcion) == 's');
     
     std::cout << "\nPresione Enter para salir...";
     std::cin.ignore();
